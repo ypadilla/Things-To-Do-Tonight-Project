@@ -7,6 +7,17 @@ body {
     width:100%;
 }
 
+#myModal{
+  background-color: gray;
+  font-family: Comic Sans MS;
+
+}
+
+.modal-content {
+   background-color: lightblue;
+   
+}
+
 
 .button {
   background: #3498db;
