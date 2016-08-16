@@ -1,11 +1,4 @@
-$(window).load(function(){
-        $('#myModal').modal('show');
-    });
-
-async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZKR3YD85re6NPj2gFlDftsWV6-GG1D0E&libraries=places&callback=initMap" 
-
-
-        var map;
+var map;
 
 function initMap() {
     var pyrmont = {
