@@ -1,59 +1,133 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title></title>
-	
+    <meta content="initial-scale=1.0, user-scalable=no" name="viewport">
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>ThingsToDo.com</title>
+    <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity=
+    "sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Denk+One" rel="stylesheet">
+    <link href="thingstodo.css" rel="stylesheet">
+    <!-- <link href="assets/images" rel="stylesheet"> -->
+</head>
+<body>
+    <div class="container-fluid">
+        <nav class="navbar navbar">
+            <div class="row">
+                <div class="col-xs-6 col-md-6">
+                    <div id="head">
+                        <h1 class="font-effect-shadow-multiple">ThingsToDo.com</h1>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-md-2" id="temp">
+                    Orlando FL 32-
+                </div>
+                <div class="col-xs-6 col-md-4">
+                    <form class="navbar-form navbar-right" role="search">
+                        <div class="form-group">
+                            <input class="form-control" placeholder="Enter zip code" type="text">
+                        </div><button class="btn btn-default" type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <div class="row">
+            <div class="col-xs-6 col-md-3">
+                <a class="thumbnail" href="#"><img src="rest.jpg"></a>
+            </div>
+            <div class="col-xs-6 col-md-3">
+                <a class="thumbnail" href="#"><img src="bar.jpg"></a>
+            </div>
+            <div class="col-xs-6 col-md-3">
+                <a class="thumbnail" href="#"><img src="theme.jpg"></a>
+            </div>
+            <div class="col-xs-6 col-md-3">
+                <a class="thumbnail" href="#"><img src="movie.jpg"></a>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <span aria-hidden="true" class="glyphicon glyphicon-pushpin"></span> Places:
+            </div>
+            <div class="panel-body">
+                <div id="places"></div>
+            </div>
+            <div id="giveMeMore">
+                <button class="btn btn-success" id="more" type="button">More Results</button>
+            </div>
+        </div>
+        <div id="map"></div>
+    </div><!--end of container-->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+    </script> 
+    <script src="assets/javascript/app.js">
+    </script> -->
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZKR3YD85re6NPj2gFlDftsWV6-GG1D0E&libraries=places&callback=initMap"></script> 
 
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script type="text/javascript">
-    $(window).load(function(){
-        $('#myModal').modal('show');
+<script type="text/javascript">
+        var map;
+
+function initMap() {
+    var pyrmont = {
+        lat: 28.5241838,
+        lng: -81.46383709999999
+    };
+    map = new google.maps.Map(document.getElementById('map'), {
+        center: pyrmont,
+        zoom: 17
     });
+    var service = new google.maps.places.PlacesService(map);
+    service.nearbySearch({
+        location: pyrmont,
+        radius: 1500,
+        type: ['food']
+    }, processResults);
+}
+
+function processResults(results, status, pagination) {
+    if (status !== google.maps.places.PlacesServiceStatus.OK) {
+        return;
+    } else {
+        createMarkers(results);
+        if (pagination.hasNextPage) {
+            var moreButton = document.getElementById('more');
+            moreButton.disabled = false;
+            moreButton.addEventListener('click', function() {
+                moreButton.disabled = true;
+                pagination.nextPage();
+            });
+        }
+    }
+}
+
+function createMarkers(places) {
+    var bounds = new google.maps.LatLngBounds();
+    var placesList = document.getElementById('places');
+    for (var i = 0, place; place = places[i]; i++) {
+        var image = {
+            url: place.icon,
+            size: new google.maps.Size(71, 71),
+            origin: new google.maps.Point(0, 0),
+            anchor: new google.maps.Point(17, 34),
+            scaledSize: new google.maps.Size(25, 25)
+        };
+        var marker = new google.maps.Marker({
+            map: map,
+            icon: image,
+            title: place.name,
+            position: place.geometry.location
+        });
+        placesList.innerHTML += '<h4>' + place.name + '</h4>';
+        bounds.extend(place.geometry.location);
+    }
+    map.fitBounds(bounds);
+}
 </script>
 
 
-</head>
-<body>
 
-
-
-
-<div class="container">
-
-  <!-- Trigger the modal with a button -->
-  <button type="button" class="button" data-toggle="modal" data-target="#myModal">Open Modal</button>
-
-  <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
-    
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Welcome to thingstodotonight.com</h4>
-          <img src="pika.png">
-        </div>
-        <div class="modal-body">
-          <p>Enter your zip code.</p>
-          <input type="text" name="zip"></input>
-        </div>
-        <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Submit</button>
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-        
-    </div>
-  </div>
-  
-</div>
-<h1>Things to do Tonight</h1>
-<p><button class="button">Fast Food</button><button type="button" class="button">Entertainment</button><button type="button" class="button">Restaurant</button><button type="button" class="button">Theme Parks</button><button type="button" class="button">Concerts</button><button type="button" class="button">Arts</button></p>
 
 </body>
 </html>

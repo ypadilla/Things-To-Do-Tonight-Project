@@ -1,50 +1,82 @@
-body {
-    background-image:url('assets/images/image.gif');
-    background-size:100%;
-    background-repeat: repeat-y;
-    background-attachment: fixed;
-    height:100%;
-    width:100%;
+.navbar {
+    height: 100px;
+    background-color: #450b4e;
+    color: #fff;
+    padding: 15px;
 }
 
-#myModal{
-  background-color: gray;
-  font-family: Comic Sans MS;
-
+.container-fluid {
+    background-color: #000;
 }
 
-.modal-content {
-   background-color: lightblue;
-   
+h1 small {
+    font-size: 15px;
 }
 
-
-.button {
-  background: #3498db;
-  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
-  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
-  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
-  background-image: -o-linear-gradient(top, #3498db, #2980b9);
-  background-image: linear-gradient(to bottom, #3498db, #2980b9);
-  -webkit-border-radius: 16;
-  -moz-border-radius: 16;
-  border-radius: 16px;
-  -webkit-box-shadow: 1px 1px 15px #030303;
-  -moz-box-shadow: 1px 1px 15px #030303;
-  box-shadow: 1px 1px 15px #030303;
-  font-family: Helvetica;
-  color: #ffffff;
-  font-size: 20px;
-  padding: 8px 12px 8px 16px;
-  text-decoration: none;
+h1 {
+    font-family: 'Denk One',sans-serif;
+    font-size: 50px;
 }
 
-.button:hover {
-  background: #3cb0fd;
-  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
-  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
-  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
-  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
-  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
-  text-decoration: none;
+.thumbnail {
+    border: none;
+    background-color: #000;
+    width: 420px;
+}
+
+#map {
+    height: 300px;
+    width: auto;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+#places {
+    margin: 5px;
+    padding: 5px;
+    height: 500px;
+    overflow: scroll;
+}
+
+.panel-default>.panel-heading {
+    background-color: #450b4e;
+    color: #fff;
+    font-size: 15px;
+    border-color: #450b4e;
+}
+
+.panel-default {
+    background-color: #000;
+    border-color: #450b4e;
+}
+
+h4 {
+    background-color: #000;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 100px;
+    padding: 20px;
+}
+
+h4:hover {
+    background-color: #fff;
+}
+
+#giveMeMore {
+    margin: 5px;
+    padding: 5px;
+}
+
+.btn-success {
+    margin-left: 18px;
+}
+
+img {
+    opacity: .8;
+    filter: alpha(opacity=50);
+}
+
+img:hover {
+    opacity: 1;
+    filter: alpha(opacity=100);
 }
