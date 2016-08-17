@@ -55,3 +55,30 @@ function createMarkers(places) {
     }
     map.fitBounds(bounds);
 }
+
+
+$("button").on('click', function(){
+var APIKey = "166a433c57516f51dfab1f7edaed8413"; 
+
+   var city=$("input").val().trim();
+    var queryURL = "http://api.openweathermap.org/data/2.5/weather?zip="+city+"&appid=" + APIKey + "&units=Imperial";
+    
+    
+    $.ajax({url: queryURL, method: 'GET'})
+
+     
+     .done(function(response) {
+        
+        console.log(queryURL);
+        
+        console.log(response);
+     
+        $("#temp").html("Your Temperature is: " + response.main.temp + " &#8457;");
+
+
+        
+        
+    }); 
+     return false;
+
+});
