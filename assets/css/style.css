@@ -94,3 +94,7 @@ img:hover {
     font-family: 'Denk One',sans-serif;
     font-size: 20px;
   }
+  #food, #bars, #clubs, #entertainment, #movies, #concerts{
+    margin: 10px;
+    
+  }
