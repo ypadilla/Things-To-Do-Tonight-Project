@@ -1,100 +1,157 @@
-.navbar {
-    height: 100px;
-    background-color: #450b4e;
-    color: #fff;
-    padding: 15px;
+body {
+  background: linear-gradient(black, white);
 }
 
-.container-fluid {
-    background-color: #000;
-}
-
-h1 small {
-    font-size: 15px;
-}
-
-h1 {
+h2{
     font-family: 'Denk One',sans-serif;
-    font-size: 50px;
 }
-
-.thumbnail {
-    border: none;
-    background-color: #000;
-    width: 420px;
+/*#header{
+    font-size: 40px;
+}*/
+.navbar-default{
+    color: white;
+    background-color: purple;
+    margin: 0px;
 }
-
-#map {
-    height: 300px;
-    width: auto;
-    margin-top: 10px;
-    margin-bottom: 30px;
-}
-
-#places {
-    margin: 5px;
-    padding: 5px;
-    height: 500px;
-    overflow: scroll;
-   
-}
-
-.panel-default>.panel-heading {
-    background-color: #450b4e;
-    color: #fff;
+#temp{
+    width: 100px;
     font-size: 15px;
-    border-color: #450b4e;
+    text-align: left;
+    color: black;
+}
+#largeImage{
+    height: 600px;
+    background-color: grey;
+    background-image: url('../images/iPhone8.jpg');
 }
 
-.panel-default {
-    background-color: #000;
-    border-color: #450b4e;
+#pictures{
+    background-color: white;
+    height: 700px; 
+}
+#about{
+     background-color: #6f9d06;
+     height: 400px;
+}
+#us{
+    background-image: url('../images/iPhone65.jpg');
+    height: 600px;
+    color: #6f9d06;
+    padding-top: 50px;
+}
+.glyphicon-paperclip{
+    font-size: 150px;
+    color: white;
+}
+.glyphicon-music,.glyphicon-glass,.glyphicon-home,.glyphicon-paperclip
+{
+    font-size: 150px;
+    color: white;
+
+}
+#music,#bar,#home{
+    text-align: center;
+    height: 250px;
+    width: 250px;
+    border-color: green;
+    border-radius: 20px;
+    /*background-color: #94c11e;*/
+    background-color: #ff9800;
+    padding-top: 40px;
 }
 
-h4 {
-    background-color: #000;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    height: 100px;
-    padding: 20px;
+#paperclipbackground{
+    background-color: #6f9d06;
+    text-align: center;
+    height: 250px;
+    width: 250px;
+    border-color: green;
+    border-radius: 20px;
+    padding-top: 40px;
+
 }
 
-h4:hover {
-    background-color: #fff;
+
+
+
+
+
+
+
+
+
+
+
+
+h1{
+    color: purple;
+
+}
+#temp{
+    height: 56px;
+    text-align: right;
+}
+.navbar-collapse{
+    height: 56px;
 }
 
-#giveMeMore {
-    margin: 5px;
-    padding: 5px;
+
+#middle{
+    background-color: red;
+}
+#side{
+
 }
 
-.btn-success {
-    margin-left: 18px;
+.thumbnail{
+    border: 0px;
 }
 
-img {
-    opacity: .8;
-    filter: alpha(opacity=50);
+
+
+
+
+
+
+
+
+
+* {
+  box-sizing: border-box;
+}
+body {
+    background: #ccc;
+    font-size: 18px;
+    line-height: 27px;
 }
 
-img:hover {
-    opacity: 1;
-    filter: alpha(opacity=100);
+#main-content,
+#sidebar {
+    width: 500px;
+    padding: 30px;
+}
+#main-content {
+    float: left;
+    background: #fff;
+}
+#sidebar {
+    float: right;
+    background: #eee;
 }
 
-  .carousel-inner > .item > img,
-  .carousel-inner > .item > a > img {
-      width: 100%;
-      margin: auto;
-      height: 500px;
-  }
+@media screen and (max-width: 768px) {
+
+    body {
+        background-color: #333;
+    }
+
+    .wrapper {
+        width: 600px;
+    }
+}
 
 
-  #temp {
-    font-family: 'Denk One',sans-serif;
-    font-size: 20px;
-  }
-  #food, #bars, #clubs, #entertainment, #movies, #concerts{
-    margin: 10px;
-    
-  }
+
+
+
+
