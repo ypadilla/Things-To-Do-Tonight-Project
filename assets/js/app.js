@@ -73,7 +73,7 @@ var APIKey = "166a433c57516f51dfab1f7edaed8413";
         
         console.log(response);
      
-        $("#temp").html("Your Temperature is: " + response.main.temp + " &#8457;");
+        $("#temp").html( response.name + ", Temp: " + response.main.temp + " &#8457; ");
 
 
         
@@ -151,6 +151,7 @@ google.maps.event.addListener(marker, 'click', function() {
   	console.log(place)
     infowindow.setContent(place.name + '<br>' + ' Rating: ' + place.rating + '<br>' + ' Address: ' + place.vicinity + '<br>' + 'Open on Google Maps:' + ' <a href="https://maps.google.com/">Google Maps</a>');
     infowindow.open(map, this);
+    $('#searchResults').html('<li>' + place.name + '<br>' +' Rating: ' + place.rating + '<br>' + ' Address ' + place.vicinity + '<br>' + 'Open on Google Maps:' + ' <a href="https://maps.google.com/">Google Maps</a>' + '<br>' + ' Website: ' + place.name+'.com');
     
   });
 }

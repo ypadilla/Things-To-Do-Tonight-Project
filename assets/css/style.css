@@ -2,7 +2,7 @@ body {
   background: linear-gradient(black, white);
 }
 
-h2{
+h2,h3{
     font-family: 'Denk One',sans-serif;
 }
 /*#header{
@@ -10,7 +10,7 @@ h2{
 }*/
 .navbar-default{
     color: white;
-    background-color: purple;
+    background-color: #6f9d06;
     margin: 0px;
 }
 #temp{
@@ -71,8 +71,10 @@ h2{
 
 }
 
-
-
+#map, #searchResults{
+    height: 300px;
+    background-color: yellow;
+}
 
 
 
@@ -88,8 +90,11 @@ h1{
 
 }
 #temp{
+    width: 200px;
     height: 56px;
     text-align: right;
+    font-family: 'Denk One',sans-serif;
+    color: white;
 }
 .navbar-collapse{
     height: 56px;
