@@ -1,13 +1,11 @@
-body {
+/*body {
   background: linear-gradient(black, white);
 }
 
 h2,h3{
     font-family: 'Denk One',sans-serif;
 }
-/*#header{
-    font-size: 40px;
-}*/
+
 .navbar-default{
     color: white;
     background-color: #6f9d06;
@@ -49,13 +47,13 @@ h2,h3{
     color: white;
 
 }
-#music,#bar,#home{
+#bar,#home{
     text-align: center;
     height: 250px;
     width: 250px;
     border-color: green;
     border-radius: 20px;
-    /*background-color: #94c11e;*/
+
     background-color: #ff9800;
     padding-top: 40px;
 }
@@ -155,8 +153,186 @@ body {
     }
 }
 
+*/
+#header,#temp,h2,p {
+    font-family: 'Denk One',sans-serif;
+}
 
+#header {
+    font-size: 40px;
+    color: #fff;
+}
 
+#temp {
+    color: #000;
+}
 
+h2 {
+    color: #000;
+}
 
+p {
+    font-size: 15px;
+    color: #000;
+}
 
+/*content*/
+#content {
+/*background-color: #a300bf;*/
+    padding-bottom: 100px;
+    padding-top: 50px;
+    background-color: #6f9d06;
+/*background-repeat: no-repeat;
+  background-image: url('../images/city.jpg'); */
+}
+
+#club,#bar,#food,#movie,#paperclip {
+    margin: 10px;
+    color: #fff;
+    height: 90px;
+    width: 90px;
+    padding: 15px;
+    border-radius: 10px;
+/*text-align: center;*/
+    font-size: 50px;
+}
+
+#club,#bar,#food,#movie,#searchResults {
+    transition: all .2s ease-in-out;
+}
+
+#club:hover {
+    transform: scale(1.1);
+}
+
+#bar:hover {
+    transform: scale(1.1);
+}
+
+#food:hover {
+    transform: scale(1.1);
+}
+
+#movie:hover {
+    transform: scale(1.1);
+}
+
+#searchResults:hover {
+    transform: scale(1.2);
+}
+
+#club {
+    background-color: #ff9800;
+/*margin-top: 100px;*/
+    background: linear-gradient(to right,rgba(255,90,0,1),#ff9800);
+}
+
+#bar {
+    background-color: #c10202;
+/*margin-top: 100px;*/
+    background: linear-gradient(to left,rgba(193,90,2,1),#c10202);
+}
+
+#food {
+    background-color: #3030e4;
+    background: linear-gradient(to left,rgba(48,120,228,1),#3030e4);
+}
+
+#movie {
+    background-color: #34d034;
+    background: linear-gradient(to right,rgba(52,160,52,1),#34d034);
+}
+
+#searchResults {
+    margin: 10px;
+/*background-color: grey;*/
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    height: 150px;
+}
+
+#map {
+    height: 300px;
+    color: #000;
+}
+
+/*content*/
+/*aboutUs*/
+#aboutUs {
+/*background-color: green;*/
+    padding-bottom: 100px;
+}
+
+#paperclip {
+    background-color: #c5c3bf;
+    padding-top: 30px;
+    width: 250px;
+}
+
+/*aboutUs*/
+/*nav*/
+/*#nav{
+     background-color: #5a1067;
+}*/
+#image {
+/*background-color: blue;*/
+    height: 300px;
+/*background-image: url('../images/iPhone10.jpg');*/
+/*background-repeat: no-repeat;*/
+}
+
+#mainContainer {
+/*background-image: url('../images/iPhone11.jpg')*/
+}
+
+/*.col-md-4{
+text-align: center
+}*/
+h3,#searchResults {
+    margin: 0;
+    color: #fff;
+    font-family: 'Denk One',sans-serif;
+}
+
+.dropdown {
+    margin-left: 15px;
+}
+
+#content {
+    height: 300px;
+/* text-align: center;*/
+}
+
+.container .jumbotron {
+    background-color: transparent;
+}
+
+.carousel-inner img {
+    width: 100%;
+/* Set width to 100% */
+    margin: auto;
+    min-height: 200px;
+}
+
+/* Hide the carousel text when the screen is less than 600 pixels wide */
+@media (max-width: 600px) {
+    .carousel-caption {
+        display: none;
+    }
+}
+
+.carousel-inner {
+    height: 300px;
+}
+
+/*.navbar-default .navbar-collapse, .navbar-default .navbar-form{
+    background-color: purple;
+}
+#midsection{
+    background-color: purple;
+}
+#nav{
+    background-color: purple;
+}*/

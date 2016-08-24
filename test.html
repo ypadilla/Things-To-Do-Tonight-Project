@@ -1,180 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
     <meta content="initial-scale=1.0, user-scalable=no" name="viewport">
     <meta charset="utf-8">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta content="width=device-width, initial-scale=1" name="viewport">
-    <title>Stuff To Do Tonight</title>
+    <title>SundaySearch</title>
     <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity=
     "sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" rel="stylesheet">
-
- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+    </script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+    </script>
     <link href="https://fonts.googleapis.com/css?family=Denk+One" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
-   
-
 </head>
 <body>
-    <!--navbar-->
-    <nav class="navbar navbar-default">
-      <div class="container-fluid">
+
+<div id="main" class="conatiner">
+    <!--header and nav bar-->
+    <div id="nav" class="container">
+      <nav class="navbar navbar-default">
         <div class="navbar-header">
-          <h2 id="header">StuffToDoTonight.com</h2>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <h2 id="header">StuffToDoTonight.CoM</h2>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav navbar-right">
-            <li><div id="temp"></div></li>
-            <li><form class="navbar-form navbar-">
-                  <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Enter Zip ">
-                  </div>
-                  <button type="submit" class="btn btn-default">Submit</button>
-                </form></li>
-          </ul>
+          <form class="navbar-form navbar-right">
+            <ul class="nav navbar-nav">
+              <li>
+                <div id="temp"></div>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                <ul id="dropdown" class="dropdown-menu">
+                  <li><a href="#">Club</a></li>
+                  <li><a href="#">Bar</a></li>
+                  <li><a href="#">Food</a></li>
+                  <li><a href="#">Movie</a></li>
+                  <li role="separator" class="divider"></li>
+                  <!-- <li><a href="#">Separated link</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">One more separated link</a></li> -->
+                </ul>
+              </li>
+            </ul>
+          </form>
         </div>
+      </nav>
+    </div>
+  <!--header and nav bar-->
+  <!--form-->
+    <div id="content" class="container">
+      <h1>Welcome!</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dignissim, felis ut dictum tristique, nibh erat feugiat libero,</p>
+      <form class="navbar-form  ">
+        <div class="form-group ">
+          <input type="text" class="form-control " placeholder="Enter Zip"> <!-- input-lg -->
+        </div>
+          <button id="input" type="submit" class="btn btn-default">Submit</button>
+      </form>
+    </div>
+  <!--form-->
+  <!--body-->
+  <div id="midsection" class="container">   
+    <!--row-->  
+      <div class="row content">
+      <!--left col buttons-->
+      <div  class="col-sm-2 sidenav">
+        <button id="club" type="submit" class="btn btn-default"><span class="glyphicon glyphicon-music" aria-hidden="true"></button>
+        <h3>Clubin</h3>
+        <button id="bar" type="submit" class="btn btn-default"><span class="glyphicon glyphicon-glass" aria-hidden="true"></button>
+        <h3>Bar-Time</h3>
+        <button id="food" type="submit" class="btn btn-default"><span class="glyphicon glyphicon-cutlery" aria-hidden="true"></button>
+        <h3>Foodz</h3>
+        <button id="movie" type="submit" class="btn btn-default"><span class="glyphicon glyphicon-facetime-video" aria-hidden="true"></button>
+        <h3>Flicks</h3>
       </div>
-    </nav><!--navbar-->
+      <!--left col buttons-->
+      <!--middle col carosel-->
+      <div class="col-sm-8 text-left">
+          <div class="jumbotron">
+              <div class="container">
+                  <!--places of interest carosel-->
+                  <div class="carousel slide" data-ride="carousel" id="myCarousel">
+                      <!-- Indicators -->
+                      <ol class="carousel-indicators">
+                          <li class="active" data-slide-to="0" data-target="#myCarousel"></li>
+                          <li data-slide-to="1" data-target="#myCarousel"></li>
+                          <li data-slide-to="1" data-target="#myCarousel"></li>
+                          <li data-slide-to="1" data-target="#myCarousel"></li>
+                      </ol><!-- Wrapper for slides -->
+                      <div class="carousel-inner" role="listbox">
+                          <div class="item active">
+                              <img alt="Image" src='assets/images/club1.jpg'>
+                              <div class="carousel-caption">
+                                  <h3>Sell $</h3><!-- <p>Text here</p> -->
+                              </div>
+                          </div>
+                          <div class="item">
+                              <img alt="Image" src='assets/images/bar2.jpg'>
+                              <div class="carousel-caption">
+                                  <h3>Sell $</h3><!-- <p>Text here</p> -->
+                              </div>
+                          </div>
+                          <div class="item">
+                              <img alt="Image" src='assets/images/food1.jpg'>
+                              <div class="carousel-caption">
+                                  <h3>Sell $</h3><!-- <p>Text here</p> -->
+                              </div>
+                          </div>
+                          <div class="item">
+                              <img alt="Image" src='assets/images/movie1.jpg'>
+                              <div class="carousel-caption">
+                                  <h3>Sell $</h3><!-- <p>Text here</p> -->
+                              </div>
+                          </div>
+                      </div><!-- Left and right controls -->
+                       <a class="left carousel-control" data-slide="prev" href="#myCarousel" role="button"><span aria-hidden="true" class=
+                      "glyphicon glyphicon-chevron-left"></span> <span class="sr-only">Previous</span></a> <a class="right carousel-control" data-slide="next"
+                      href="#myCarousel" role="button"><span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span> <span class=
+                      "sr-only">Next</span></a>
+                  </div><!--places of interest carosel-->
+              </div>
+          </div>
+      </div>
+      <!--middle col carosel-->
+      <!--right col map and search results-->
+      <div class="col-sm-2 sidenav">
+          <div class="well" id="map">
+              <p>MAP GOES HERE</p>
+          </div>
+          <div class="well" id="searchResults">
+              <p>SEARCH RESULT GOES HERE</p>
+          </div>
+      </div> 
+      <!--right col map and search results-->
+    </div>
+    <!--row-->
+  </div>
+  <!--foooter-->
+  <div id="foot" class="container">
+    <footer class="container text-center">
+        <p>&copy; StuffToDoTight.coM</p>
+    </footer>
+  </div>
+  <!--foooter-->
+  </div>
 
-
-
-     
-
-  
-
-
-
-
-
-    <!--main container start-->
-    <div id ="pictures" class="container-fluid">
-
-    <!--large image start-->
-    <div id="largeImage"><img alt="..." src="assets/images/iPhone6.jpg"></div>
-    <!--large image end-->
-
-
-    
-        <!--images and map start-->
-        <div class="row">
-            <div class="col-md-8">
-                <div class="row">
-                    <div class="col-sm-6 col-md-4">
-                        <div class="thumbnail"><span id="music" class="glyphicon glyphicon-music" aria-hidden="true"></div>
-                    </div>
-                    <div class="col-sm-6 col-md-4">
-                        <div class="thumbnail"><span id="bar" class="glyphicon glyphicon-glass" aria-hidden="true"></span></div>
-                    </div>
-                    <div class="col-sm-6 col-md-4">
-                        <div class="thumbnail"><span id="home" class="glyphicon glyphicon-home
-" aria-hidden="true"></span></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Sidebar</h3>
-                    </div>
-                    <div class="panel-body">
-                        <div id="map"></div>
-                    </div>
-                </div>
-            </div>
-        </div><!--images and map end-->
-        <!--images and results start-->
-        <div class="row">
-            <div class="col-md-8">
-                <div class="row">
-                    <div class="col-sm-6 col-md-4">
-                        <div class="thumbnail"><img alt="..." src="assets/images/bar.jpg"></div>
-                    </div>
-                    <div class="col-sm-6 col-md-4">
-                        <div class="thumbnail"><img alt="..." src="assets/images/bar.jpg"></div>
-                    </div>
-                    <div class="col-sm-6 col-md-4">
-                        <div class="thumbnail"><img alt="..." src="assets/images/bar.jpg"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Sidebar</h3>
-                    </div>
-                    <div class="panel-body">
-                        <div id="searchResults"></div>
-                    </div>
-                </div>
-            </div>
-        </div><!--images and results end-->
-    </div><!--main container end-->
-
-
-
-
-
-
-
-    <!--second container start-->
-    <div id ="about" class="container-fluid">
-        <div class="col-md-12">
-            <div class="page-header">
-                <h2>About Project</h2>
-            </div>
-            <div class="row">
-                <div class="col-md-3">
-                <div id="paperclipbackground" class="thumbnail"><span id="paperclip" class="glyphicon glyphicon-paperclip" aria-hidden="true"></span></div>
-                </div>
-                <div class="col-md-9">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dignissim, felis ut dictum tristique, nibh erat feugiat libero, sit
-                    amet fringilla mauris velit in mi. Duis tempus felis vitae felis vulputate pretium. Nullam commodo, est ac auctor ornare, eros nisi
-                    fringilla sem, non pulvinar tortor lorem sit amet sem. Aenean quis erat facilisis, porttitor ex cursus, luctus enim. Curabitur et metus in
-                    lacus tristique sagittis et in lorem. Nunc id nisi et neque fringilla ultricies. Aenean at feugiat elit, a posuere justo. Pellentesque
-                    egestas dolor et nisi venenatis, nec fermentum urna fringilla. Etiam efficitur porta purus, id posuere sem congue a.</p>
-                </div>
-            </div>
-        </div>
-    </div><!--second container end-->
-
-
-
-
-
-
-
-
-
-    <!--third container start-->
-    <div id="us" class="container-fluid">
-        <div class="row">
-            <div class="col-sm-3">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt optio provident tempora amet, eveniet et, eum illum, culpa laborum dicta
-                recusandae magni architecto. Illo saepe facilis, unde. Debitis, atque, doloremque?</p>
-            </div>
-            <div class="col-sm-3">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At dolorum perferendis voluptates error ullam placeat repellendus. Repellendus
-                error repellat veritatis recusandae voluptates earum rerum consectetur itaque, ipsam nihil. Alias, nemo.</p>
-            </div>
-            <div class="col-sm-3">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores ratione sint ex porro excepturi non dolorum, ullam ea quae vel earum,
-                soluta obcaecati natus. Eligendi iusto accusantium mollitia debitis assumenda!</p>
-            </div>
-                        <div class="col-sm-3">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores ratione sint ex porro excepturi non dolorum, ullam ea quae vel earum,
-                soluta obcaecati natus. Eligendi iusto accusantium mollitia debitis assumenda!</p>
-            </div>
-        </div>
-    </div><!--third container end-->
-
-
-
-    
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZKR3YD85re6NPj2gFlDftsWV6-GG1D0E&libraries=places&callback=initMap"></script> 
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-
 <!--firebase-->
 <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
 <script>
@@ -187,10 +168,10 @@
   };
   firebase.initializeApp(config);
 </script>
-
 <!-- GeoFire -->
 <script src="https://cdn.firebase.com/libs/geofire/4.1.1/geofire.min.js"></script>
-
 <script type="text/javascript" src ="assets/js/app.js"></script>
+
+
 </body>
 </html>
