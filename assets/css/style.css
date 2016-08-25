@@ -1,201 +1,81 @@
-/*body {
-  background: linear-gradient(black, white);
-}
-
-h2,h3{
+.navbar-default, #temp, .navbar-collapse{
+    background-color: #40274f;
     font-family: 'Denk One',sans-serif;
-}
-
-.navbar-default{
     color: white;
-    background-color: #6f9d06;
-    margin: 0px;
+    border-radius: 10px 10px 10px 10px;
+    border-color: transparent;
+    margin-bottom: 2px;
 }
-#temp{
-    width: 100px;
-    font-size: 15px;
-    text-align: left;
-    color: black;
-}
-#largeImage{
-    height: 600px;
-    background-color: grey;
-    background-image: url('../images/iPhone8.jpg');
+#purpleshit{
+    height: 50%;
+    background-image: url('../images/purpleshit.jpg');
+    /*background-color: purple;*/
+    padding-top: 30px;
+    border-radius: 50px 10px 10px 10px;
 }
 
-#pictures{
+.container-fluid .jumbotron{
+    border-radius: 50px 10px 10px 10px;
+    margin-left: 30%;
+    margin-right: 30%;
+    padding: 10px;
+    font-family: 'Denk One',sans-serif;
+    color: white;
+    background: rgba(53, 47, 47, 0.7);
+    border-radius: 10px;
+}
+.form-control{
+    background-color: transparent;
+    border-color: black;
+}
+#iphone{
     background-color: white;
-    height: 700px; 
-}
-#about{
-     background-color: #6f9d06;
-     height: 400px;
-}
-#us{
-    background-image: url('../images/iPhone65.jpg');
-    height: 600px;
-    color: #6f9d06;
+    height: 30%;
     padding-top: 50px;
-}
-.glyphicon-paperclip{
-    font-size: 150px;
-    color: white;
-}
-.glyphicon-music,.glyphicon-glass,.glyphicon-home,.glyphicon-paperclip
-{
-    font-size: 150px;
-    color: white;
-
-}
-#bar,#home{
-    text-align: center;
-    height: 250px;
-    width: 250px;
-    border-color: green;
-    border-radius: 20px;
-
-    background-color: #ff9800;
-    padding-top: 40px;
-}
-
-#paperclipbackground{
-    background-color: #6f9d06;
-    text-align: center;
-    height: 250px;
-    width: 250px;
-    border-color: green;
-    border-radius: 20px;
-    padding-top: 40px;
-
-}
-
-#map, #searchResults{
-    height: 300px;
-    background-color: yellow;
-}
-
-
-
-
-
-
-
-
-
-
-h1{
-    color: purple;
-
-}
-#temp{
-    width: 200px;
-    height: 56px;
-    text-align: right;
-    font-family: 'Denk One',sans-serif;
-    color: white;
-}
-.navbar-collapse{
-    height: 56px;
-}
-
-
-#middle{
-    background-color: red;
-}
-#side{
-
-}
-
-.thumbnail{
-    border: 0px;
-}
-
-
-
-
-
-
-
-
-
-
-* {
-  box-sizing: border-box;
-}
-body {
-    background: #ccc;
-    font-size: 18px;
-    line-height: 27px;
-}
-
-#main-content,
-#sidebar {
-    width: 500px;
-    padding: 30px;
-}
-#main-content {
-    float: left;
-    background: #fff;
-}
-#sidebar {
-    float: right;
-    background: #eee;
-}
-
-@media screen and (max-width: 768px) {
-
-    body {
-        background-color: #333;
-    }
-
-    .wrapper {
-        width: 600px;
-    }
-}
-
-*/
-#header,#temp,h2,p {
+    text-align: center;  
     font-family: 'Denk One',sans-serif;
 }
 
-#header {
-    font-size: 40px;
-    color: #fff;
-}
 
-#temp {
-    color: #000;
-}
 
-h2 {
-    color: #000;
-}
 
-p {
-    font-size: 15px;
-    color: #000;
-}
-
-/*content*/
-#content {
-/*background-color: #a300bf;*/
-    padding-bottom: 100px;
-    padding-top: 50px;
-    background-color: #6f9d06;
-/*background-repeat: no-repeat;
-  background-image: url('../images/city.jpg'); */
-}
 
 #club,#bar,#food,#movie,#paperclip {
     margin: 10px;
     color: #fff;
     height: 90px;
-    width: 90px;
+    width: 200px;
     padding: 15px;
     border-radius: 10px;
+    border-color: transparent;
 /*text-align: center;*/
     font-size: 50px;
 }
+
+
+#club {
+    background-color: #ff9800;
+/*margin-top: 100px;*/
+    background: linear-gradient(to right,rgba(255,90,0,1),#ff9800);
+}
+
+#bar {
+    background-color: #c10202;
+/*margin-top: 100px;*/
+    background: linear-gradient(to left,rgba(193,90,2,1),#c10202);
+}
+
+#food {
+    background-color: #3030e4;
+    background: linear-gradient(to left,rgba(48,120,228,1),#3030e4);
+}
+#movie {
+    background-color: #34d034;
+    background: linear-gradient(to right,rgba(52,160,52,1),#34d034);
+}
+
+
+
 
 #club,#bar,#food,#movie,#searchResults {
     transition: all .2s ease-in-out;
@@ -217,97 +97,8 @@ p {
     transform: scale(1.1);
 }
 
-#searchResults:hover {
-    transform: scale(1.2);
-}
 
-#club {
-    background-color: #ff9800;
-/*margin-top: 100px;*/
-    background: linear-gradient(to right,rgba(255,90,0,1),#ff9800);
-}
 
-#bar {
-    background-color: #c10202;
-/*margin-top: 100px;*/
-    background: linear-gradient(to left,rgba(193,90,2,1),#c10202);
-}
-
-#food {
-    background-color: #3030e4;
-    background: linear-gradient(to left,rgba(48,120,228,1),#3030e4);
-}
-
-#movie {
-    background-color: #34d034;
-    background: linear-gradient(to right,rgba(52,160,52,1),#34d034);
-}
-
-#searchResults {
-    margin: 10px;
-/*background-color: grey;*/
-    color: #fff;
-    padding: 10px;
-    border-radius: 5px;
-    text-align: center;
-    height: 150px;
-}
-
-#map {
-    height: 300px;
-    color: #000;
-}
-
-/*content*/
-/*aboutUs*/
-#aboutUs {
-/*background-color: green;*/
-    padding-bottom: 100px;
-}
-
-#paperclip {
-    background-color: #c5c3bf;
-    padding-top: 30px;
-    width: 250px;
-}
-
-/*aboutUs*/
-/*nav*/
-/*#nav{
-     background-color: #5a1067;
-}*/
-#image {
-/*background-color: blue;*/
-    height: 300px;
-/*background-image: url('../images/iPhone10.jpg');*/
-/*background-repeat: no-repeat;*/
-}
-
-#mainContainer {
-/*background-image: url('../images/iPhone11.jpg')*/
-}
-
-/*.col-md-4{
-text-align: center
-}*/
-h3,#searchResults {
-    margin: 0;
-    color: #fff;
-    font-family: 'Denk One',sans-serif;
-}
-
-.dropdown {
-    margin-left: 15px;
-}
-
-#content {
-    height: 300px;
-/* text-align: center;*/
-}
-
-.container .jumbotron {
-    background-color: transparent;
-}
 
 .carousel-inner img {
     width: 100%;
@@ -315,24 +106,63 @@ h3,#searchResults {
     margin: auto;
     min-height: 200px;
 }
-
 /* Hide the carousel text when the screen is less than 600 pixels wide */
 @media (max-width: 600px) {
     .carousel-caption {
         display: none;
     }
 }
-
 .carousel-inner {
     height: 300px;
+
+}
+#carosel{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+h1{
+    text-align: center;
+    font-family: 'Denk One',sans-serif;
+    margin-top: 20px;
 }
 
-/*.navbar-default .navbar-collapse, .navbar-default .navbar-form{
-    background-color: purple;
+
+#foot{
+    background-color: #40274f;
+    height: 50px;
+    font-family: 'Denk One',sans-serif;
+    padding-top: 15px;
+    margin-top: 20px;
+    border-radius: 10px 10px 10px 10px;
+    color: white;
+    margin-top: 2px;
 }
-#midsection{
-    background-color: purple;
+#map{
+    height: 300px;
+    margin-top: 50px;
+    border-radius: 10px 10px 10px 10px;
+    padding: 10px;
+    border: 2px dashed #fff;
+    color: #40274f;
 }
-#nav{
-    background-color: purple;
-}*/
+#searchResults{
+    height: 200px;
+    margin-top: 50px;
+     border-radius: 10px;
+    padding: 10px;
+    border: 2px dashed #fff;
+    color: white;
+}
+#iphone{
+
+    background-color: blue;
+    padding-bottom: 10px;
+     background-image: url('../images/purpleshit.jpg');
+     border-radius: 50px 10px 10px 10px;
+}
+h4{
+    color: white;
+}
+body{
+    background-color: #e2d9e6;
+}
