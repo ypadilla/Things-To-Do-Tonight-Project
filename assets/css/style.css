@@ -166,3 +166,13 @@ h4{
 body{
     background-color: #e2d9e6;
 }
+
+h3{
+    color: white;
+    text-align: center;
+    font-family: 'Denk One',sans-serif;
+}
+
+li {
+    list-style-type: none;
+}

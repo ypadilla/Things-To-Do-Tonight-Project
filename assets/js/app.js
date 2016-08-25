@@ -1,6 +1,16 @@
+//restaurant, bar, movie_rental,night_club  works for place type
+
+
+
 var map;
 var infowindow;
 var pos;
+
+
+
+
+
+
 
 function initMap() {
 
@@ -23,11 +33,13 @@ function initMap() {
       map.setCenter(pos);
       var myLocation = pos; //Sets variable to geo location long and lat co-ordinates.
 
+
       var service = new google.maps.places.PlacesService(map);
       service.nearbySearch({
         location: myLocation, //Uses geolocation to find the following
         radius: 1500,
-        types: ['food']
+        types: ['restaurant' , 'bar', 'night_club', 'movie_rental']
+
       }, callback);
     })
   };
@@ -63,7 +75,9 @@ google.maps.event.addListener(marker, 'click', function() {
   	console.log(place)
     infowindow.setContent(place.name + '<br>' + ' Rating: ' + place.rating + '<br>' + ' Address: ' + place.vicinity + '<br>' + 'Open on Google Maps:' + ' <a href="https://maps.google.com/">Google Maps</a>');
     infowindow.open(map, this);
-    $('#searchResults').html('<li>' + place.name + '<br>' +' Rating: ' + place.rating + '<br>' + ' Address ' + place.vicinity + '<br>' + 'Open on Google Maps:' + ' <a href="https://maps.google.com/">Google Maps</a>' + '<br>' + ' Website: ' + place.name+'.com');
+
+
+    $('#searchResults').html('<li>' + place.name + '<br>' +' Rating: ' + place.rating + '<br>' + ' Address ' + place.vicinity + '<br>' + 'Open on Google Maps:' + ' <a href="https://maps.google.com/" target="_blank">Google Maps</a>' + '<br>' + ' Website: ' + place.name+'.com');
     
   });
 }
