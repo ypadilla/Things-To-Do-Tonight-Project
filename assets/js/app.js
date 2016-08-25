@@ -1,7 +1,3 @@
-//restaurant, bar, movie_rental,night_club  works for place type
-
-
-
 var map;
 var infowindow;
 var pos;
@@ -32,6 +28,7 @@ function initMap() {
       infoWindow.setContent('You are here! ' + ' <span class="glyphicon glyphicon-user"></span>');
       map.setCenter(pos);
       var myLocation = pos; //Sets variable to geo location long and lat co-ordinates.
+
 
 
       var service = new google.maps.places.PlacesService(map);
@@ -72,12 +69,12 @@ google.maps.event.addListener(marker, 'click', function() {
   });
 
   google.maps.event.addListener(marker, 'click', function() {
-  	console.log(place)
+  	
     infowindow.setContent(place.name + '<br>' + ' Rating: ' + place.rating + '<br>' + ' Address: ' + place.vicinity + '<br>' + 'Open on Google Maps:' + ' <a href="https://maps.google.com/">Google Maps</a>');
     infowindow.open(map, this);
 
 
-    $('#searchResults').html('<li>' + place.name + '<br>' +' Rating: ' + place.rating + '<br>' + ' Address ' + place.vicinity + '<br>' + 'Open on Google Maps:' + ' <a href="https://maps.google.com/" target="_blank">Google Maps</a>' + '<br>' + ' Website: ' + place.name+'.com');
+    $('#searchResults').html('<li>' + place.name + '<br>' +' Rating: ' + place.rating + '<br>' + ' Address ' + place.vicinity + '<br>' + 'Open on Google Maps:' + ' <a href="https://www.google.com/maps/search/" target="_blank">Google Maps</a>' + '<br>' + ' Website: ' + place.name+'.com');
     
   });
 }
@@ -87,7 +84,7 @@ google.maps.event.addListener(marker, 'click', function() {
 initMap();
 
 
-$("button").on('click', function(){
+$("#input").on('click', function(){
 var APIKey = "166a433c57516f51dfab1f7edaed8413"; 
 
    var city=$("input").val().trim();
@@ -113,7 +110,7 @@ var APIKey = "166a433c57516f51dfab1f7edaed8413";
         
         console.log(response);
      
-        $("#temp").html( response.name + ", Temp: " + response.main.temp + " &#8457; ");
+        $("#temp").html(response.name + ", Temp: " + response.main.temp + " &#8457; ");
 
 
         
@@ -123,3 +120,5 @@ var APIKey = "166a433c57516f51dfab1f7edaed8413";
 
 });
 
+
+$('.dropdown-toggle').dropdown()
