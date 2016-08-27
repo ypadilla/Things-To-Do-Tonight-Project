@@ -1,77 +1,156 @@
-.navbar-default, #temp, .navbar-collapse{
-    background-color: #40274f;
+.navbar-inverse{
     font-family: 'Denk One',sans-serif;
-    color: white;
-    border-radius: 10px 10px 10px 10px;
+    color: #effffa;
     border-color: transparent;
-    margin-bottom: 2px;
+    width: 100%;
+    z-index: 10;
+    position: fixed;
+    /*background-color: transparent;*/
+    opacity: .5;
 }
-#purpleshit{
-    height: 50%;
-    background-image: url('../images/purpleshit.jpg');
-    /*background-color: purple;*/
-    padding-top: 30px;
-    border-radius: 50px 10px 10px 10px;
+#temp{
+    font-family: 'Denk One',sans-serif;
+    color: white;  
 }
 
-.container-fluid .jumbotron{
-    border-radius: 50px 10px 10px 10px;
-    margin-left: 30%;
-    margin-right: 30%;
-    padding: 10px;
+
+
+#purpleshit{
+  height: 700px;
+  width: 100%;
+  /*background-color: purple;*/
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+    background-color: #560156;
+    position: relative;
+
+}
+
+#purpleshit .jumbotron{
+    width: 40%;
+    margin: auto;
+    margin-top: 200px;
+    position: relative;
     font-family: 'Denk One',sans-serif;
     color: white;
-    background: rgba(53, 47, 47, 0.7);
+    opacity: .4;
+    background-color:#560156;
     border-radius: 10px;
+    text-align: center;
 }
+
+#purpleshit .jumbotron h1{
+    color: red;
+}
+
+
 .form-control{
     background-color: transparent;
-    border-color: black;
+    border-color: #c16be0;
+    
 }
+
+#carosel{
+    height: 700px;
+    background-color: #560156;
+}
+
+.carousel-inner img {
+    width: 100%;
+    margin: auto;
+    min-height: 200px;
+    max-height: 500px;
+}
+
+/* Hide the carousel text when the screen is less than 600 pixels wide */
+@media (max-width: 600px) {
+    .carousel-caption {
+        display: none;
+    }
+}
+
+#myCarousel{
+    width: 80%;
+    margin: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*#iphone{
+     border-radius: 50px 10px 10px 10px;
+}*/
+
+#carosel h3{
+    text-align: center;
+    color: #560156;
+    font-family: 'Denk One',sans-serif;
+    margin-top: 20px;
+    padding-bottom: 40px;
+}
+
 #iphone{
-    background-color: white;
-    height: 30%;
-    padding-top: 50px;
+    color: #560156;
     text-align: center;  
     font-family: 'Denk One',sans-serif;
+    margin-bottom: 20px
 }
-
-
-
+#iphone h4, #iphone h3{
+    padding-top: 20px;
+    padding-bottom: 40px;
+    color: #560156;
+}
 
 
 #club,#bar,#food,#movie,#paperclip {
     margin: 10px;
     color: #fff;
-    height: 90px;
+    height: 200px;
     width: 200px;
     padding: 15px;
     border-radius: 10px;
     border-color: transparent;
-/*text-align: center;*/
-    font-size: 50px;
+    font-size: 90px;
+    
+
+
 }
 
 
 #club {
-    background-color: #ff9800;
-/*margin-top: 100px;*/
-    background: linear-gradient(to right,rgba(255,90,0,1),#ff9800);
+    background-color: #560156;
+    /*background: linear-gradient(to bottom(#560156, white));*/
+     background: -webkit-linear-gradient(#560156, #a789dc)
+
+
 }
 
 #bar {
     background-color: #c10202;
-/*margin-top: 100px;*/
-    background: linear-gradient(to left,rgba(193,90,2,1),#c10202);
+    /*background: linear-gradient(to bottom,rgba(193,90,2,1),#c10202);*/
+     background: -webkit-linear-gradient(#c10202, #fdb5b5)
 }
 
 #food {
     background-color: #3030e4;
-    background: linear-gradient(to left,rgba(48,120,228,1),#3030e4);
+    /*background: linear-gradient(to bottom,rgba(48,120,228,1),#3030e4);*/
+    background: -webkit-linear-gradient(#3030e4, #bdc2dc)
 }
 #movie {
     background-color: #34d034;
-    background: linear-gradient(to right,rgba(52,160,52,1),#34d034);
+    /*background: linear-gradient(to bottom,rgba(52,160,52,1),#34d034);*/
+    background: -webkit-linear-gradient(#34d034, #d6eabe)
+
 }
 
 
@@ -99,80 +178,47 @@
 
 
 
+#map{
+    height: 550px;
+    margin-top: 50px;
+    border-radius: 10px 10px 10px 10px;
+    padding: 10px;
+    /*border: 2px dashed #fff;*/
+    border-style: double;
+    color: #c16be0;
+ 
+}
+#searchResults{
+    height: 250px;
+    margin-top: 50px;
+     border-radius: 10px;
+    padding: 10px;
+    /*border: 2px dashed #fff;*/
+        border-style: double;
+    color: #c16be0;
+}
+#yaviDeo{
+background-color: #560156;
+width: 80%;
+padding-bottom: 50px;
+    background-color: #560156;
+    padding-top: 50px;
 
-.carousel-inner img {
-    width: 100%;
-/* Set width to 100% */
-    margin: auto;
-    min-height: 200px;
-}
-/* Hide the carousel text when the screen is less than 600 pixels wide */
-@media (max-width: 600px) {
-    .carousel-caption {
-        display: none;
-    }
-}
-.carousel-inner {
-    height: 300px;
 
 }
-#carosel{
-    margin-top: 10px;
-    margin-bottom: 20px;
+#sum{
+    background-color: #560156;
+
 }
-h1{
-    text-align: center;
-    font-family: 'Denk One',sans-serif;
-    margin-top: 20px;
+#temp{
+    color: red;
 }
 
 
 #foot{
-    background-color: #40274f;
+    background-color: #560156;
     height: 50px;
     font-family: 'Denk One',sans-serif;
     padding-top: 15px;
-    margin-top: 20px;
-    border-radius: 10px 10px 10px 10px;
     color: white;
-    margin-top: 2px;
-}
-#map{
-    height: 300px;
-    margin-top: 50px;
-    border-radius: 10px 10px 10px 10px;
-    padding: 10px;
-    border: 2px dashed #fff;
-    color: #40274f;
-}
-#searchResults{
-    height: 200px;
-    margin-top: 50px;
-     border-radius: 10px;
-    padding: 10px;
-    border: 2px dashed #fff;
-    color: white;
-}
-#iphone{
-
-    background-color: blue;
-    padding-bottom: 10px;
-     background-image: url('../images/purpleshit.jpg');
-     border-radius: 50px 10px 10px 10px;
-}
-h4{
-    color: white;
-}
-body{
-    background-color: #e2d9e6;
-}
-
-h3{
-    color: white;
-    text-align: center;
-    font-family: 'Denk One',sans-serif;
-}
-
-li {
-    list-style-type: none;
 }
