@@ -228,3 +228,6 @@ padding-bottom: 50px;
 color: #686868;
 font-size: 30px;
 }
+.container-fluid{
+    padding: 0;
+}
