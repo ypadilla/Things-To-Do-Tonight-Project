@@ -35,7 +35,7 @@
     position: relative;
     font-family: 'Denk One',sans-serif;
     color: white;
-    opacity: .4;
+    opacity: .8;
     background-color:#560156;
     border-radius: 10px;
     text-align: center;
@@ -55,6 +55,7 @@
 #carosel{
     height: 700px;
     background-color: #560156;
+
 }
 
 .carousel-inner img {
@@ -74,6 +75,11 @@
 #myCarousel{
     width: 80%;
     margin: auto;
+
+
+
+
+
 }
 
 
@@ -123,10 +129,24 @@
     border-radius: 10px;
     border-color: transparent;
     font-size: 90px;
-    
-
-
 }
+
+
+/*.btn-default {
+  
+   
+
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+
+*/
+
 
 
 #club {
@@ -187,7 +207,7 @@
     padding: 10px;
     /*border: 2px dashed #fff;*/
     border-style: double;
-    color: #c16be0;
+    border-color: white;
  
 }
 #searchResults{
@@ -197,7 +217,8 @@
     padding: 10px;
     /*border: 2px dashed #fff;*/
         border-style: double;
-    color: #c16be0;
+    color: white;
+    font-family: 'Denk One',sans-serif;
 }
 #yaviDeo{
 background-color: #560156;
@@ -223,13 +244,27 @@ padding-bottom: 50px;
     font-family: 'Denk One',sans-serif;
     padding-top: 15px;
     color: white;
+
 }
 #carosel h3
 {
     padding-top: 10px;
 color: #686868;
 font-size: 30px;
+
+
 }
 .container-fluid{
     padding: 0;
+}
+
+
+
+img {
+ background: -webkit-linear-gradient(#560156, #a789dc)
+
+}
+
+li{
+    list-style-type: none;
 }
