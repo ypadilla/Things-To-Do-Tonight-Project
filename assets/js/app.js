@@ -8,7 +8,6 @@ var config = {
     storageBucket: "things-to-do-tonight.appspot.com",
 };
 
-
 function initMap() {
     if (navigator.geolocation) { //GEO LOCATION, FINDS USERS LOCATION
         navigator.geolocation.getCurrentPosition(function(position) {
